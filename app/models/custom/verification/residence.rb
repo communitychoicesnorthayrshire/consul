@@ -7,6 +7,7 @@ class Verification::Residence
   validates :terms_of_service, acceptance: { allow_nil: false }
   validates :postal_code, presence: true
 
+  validate :allowed_age
   validate :postal_code_is_allowed
   validate :document_number_uniqueness_if_present
 
