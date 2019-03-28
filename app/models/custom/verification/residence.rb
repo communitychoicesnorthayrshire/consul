@@ -4,7 +4,7 @@ require_dependency Rails.root.join("app", "models", "verification", "residence")
 class Verification::Residence
   clear_validators!
 
-  validates :date_of_birth, prescence: true
+  validates :date_of_birth, presence: true
   validates :terms_of_service, acceptance: { allow_nil: false }
   validates :postal_code, presence: true
 
